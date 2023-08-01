@@ -2,8 +2,7 @@ import { softDeleteUser } from "~/dataAccess/user/softDeleteUser";
 import { userAbility } from "~/utils/userAbility";
 
 export const deleteUser = async (request, userId) => {
-  const ability = await userAbility("9e18f7a9-c3fb-496a-acbd-45c07b5b4ab4");
-  ability.can("deletse", "User");
+  const ability = await userAbility("7ab1ff7d-e916-49ab-bc32-d2e897e62b7d");
   const users = await softDeleteUser(userId, ability);
   return users;
 };
