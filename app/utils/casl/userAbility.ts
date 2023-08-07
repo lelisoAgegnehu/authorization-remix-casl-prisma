@@ -1,5 +1,5 @@
 import { createPrismaAbility } from "@casl/prisma";
-import { prisma } from "./prisma.server";
+import { prisma } from "../prisma.server";
 
 export const userAbility = async (userId: string) => {
   const ur = await prisma.user.findUnique({
@@ -30,5 +30,6 @@ export const userAbility = async (userId: string) => {
 
     return filtered;
   }) as any;
+  console.log(permission);
   return createPrismaAbility(permission);
 };
