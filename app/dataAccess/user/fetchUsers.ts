@@ -1,4 +1,4 @@
-import { accessibleBy } from "~/utils/ability";
+import { accessibleBy } from "~/utils/casl/ability";
 import { prisma } from "~/utils/prisma.server";
 
 export const fetchUsers = async (ability) => {
